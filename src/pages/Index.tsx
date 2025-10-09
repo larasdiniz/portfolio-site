@@ -20,7 +20,17 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2024 Portfólio Desenvolvedor. Feito com ❤️ e código.</p>
+          <p>
+            © Copyright{" "}
+            <a 
+              href="https://github.com/larasdiniz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="underline hover:text-primary"
+            >
+              Lara Diniz
+            </a>. All Rights Reserved
+          </p>
         </div>
       </footer>
     </div>
