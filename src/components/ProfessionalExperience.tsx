@@ -4,18 +4,32 @@ import { Briefcase, Calendar } from "lucide-react";
 const ProfessionalExperience = () => {
   const experiences = [
     {
-      company: "Nome da Empresa 1",
-      role: "Cargo/Posição",
-      period: "Jan 2023 - Presente",
+      company: "DL Info",
+      role: "Desenvolvedor Web e Mobile",
+      period: "Nov 2024 - Presente",
       description: "Descrição das principais responsabilidades e conquistas nesta posição. Tecnologias utilizadas e projetos desenvolvidos.",
-      technologies: ["React", "TypeScript", "Node.js"],
+      technologies: ["C#", ".NET", "ASP.NET", "MVC", "SQL Server", "Flutter", "Dart", "Visual Studio"],
     },
     {
-      company: "Nome da Empresa 2",
-      role: "Cargo/Posição",
-      period: "Jun 2021 - Dez 2022",
-      description: "Descrição das principais responsabilidades e conquistas nesta posição. Tecnologias utilizadas e projetos desenvolvidos.",
-      technologies: ["Java", "Spring Boot", "PostgreSQL"],
+      "company": "Atos Capital",
+      "role": "Desenvolvedor Full Stack",
+      "period": "Fev 2025 - Jun 2025",
+      "description": "Em colaboração com minha equipe distribuída pelo Porto Digital, desenvolvi um dashboard de KPIs para o monitoramento e análise de dados estratégicos da empresa, facilitando a visualização de indicadores de desempenho e promovendo uma gestão orientada por dados. Além disso, integramos soluções de Inteligência Artificial para automatizar relatórios semanais, otimizando tempo e aumentando a precisão das análises.",
+      "technologies": ["Python", "TypeScript", "Microsoft SQL Server", "n8n", "Agentes de IA", "Automação de Processos", "Inteligência de Negócios (BI)"]
+    },
+    {
+      company: "Palynee",
+      role: "Desenvolvedor Back end",
+      period: "Jan 2024 - Jun 2024",
+      description: "Atuei como desenvolvedora back-end em uma aplicação web integrada à AWS por meio do Porto Digital, utilizando Java, Spring Boot, Spring Framework, MySQL e SQL. Desenvolvi uma API para upload e gerenciamento de imagens na nuvem, com geração de chave e integração ao banco de dados, além de colaborar no levantamento de requisitos e aplicar metodologias ágeis.",
+      technologies: ["Java", "Spring Boot", "Spring Framework", "MySQL", "SQL", "AWS", "GitHub", "VS Code"],
+    },
+    {
+      "company": "Grupo Tiradentes",
+      "role": "Desenvolvedora Front-end",
+      "period": "Jan 2024 - Jun 2024",
+      "description": "Desenvolvi a interface da página inicial e da área de login para pacientes de um centro odontológico, atuando como desenvolvedora front-end por meio do Porto Digital. Utilizei HTML, CSS e JavaScript, empregando ferramentas como VS Code e GitHub. Colaborei no levantamento de requisitos e apliquei metodologias ágeis para garantir entregas pontuais e de qualidade.",
+      "technologies": ["HTML", "CSS", "JavaScript", "VS Code", "GitHub"]
     },
   ];
 

@@ -6,25 +6,25 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "seu.email@exemplo.com",
-      link: "mailto:seu.email@exemplo.com",
+      value: "lara.diniztrabalho@gmail.com",
+      link: "mailto:lara.diniztrabalho@gmail.com",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/seuperfil",
-      link: "https://github.com/seuperfil",
+      value: "github.com/larasdiniz",
+      link: "https://github.com/larasdiniz",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/seuperfil",
-      link: "https://linkedin.com/in/seuperfil",
+      value: "linkedin.com/in/lara-diniz-29a996275",
+      link: "https://www.linkedin.com/in/lara-diniz-29a996275",
     },
     {
       icon: MapPin,
       label: "Localização",
-      value: "São Paulo, Brasil",
+      value: "Aracaju, Brasil",
       link: null,
     },
   ];

@@ -1,61 +1,74 @@
 import ProjectCarousel from "./ProjectCarousel";
 import { Smartphone, Code, Server } from "lucide-react";
-import mobileProject from "@/assets/mobile-project.jpg";
-import frontendProject from "@/assets/frontend-project.jpg";
-import backendProject from "@/assets/backend-project.jpg";
+
+// Imagens Mobile
+import taskflowImage from "@/assets/taskflowBanner.jpeg";
+import healthAppImage from "@/assets/mobile-project.jpg";
+
+// Imagens Front-end
+import frontendProject1 from "@/assets/frontend-project.jpg";
+import frontendProject2 from "@/assets/frontend-project.jpg";
+
+// Imagens Back-end
+import backendProject1 from "@/assets/backend-project.jpg";
+import backendProject2 from "@/assets/backend-project.jpg";
 
 const ProjectsSection = () => {
+  // Projetos Mobile
   const mobileProjects = [
     {
-      title: "App Mobile E-commerce",
-      description: "Aplicativo completo de e-commerce com React Native, incluindo carrinho, pagamentos e perfil de usuário.",
-      image: mobileProject,
-      link: "https://github.com",
-      tags: ["React Native", "TypeScript", "Redux"],
+      title: "TaskFlow",
+      description: "Projeto de gerenciamento de tarefas em Flutter, com telas funcionais, navegação fluida e design intuitivo, focado em melhorar a organização do dia a dia.",
+      image: taskflowImage,
+      link: "https://github.com/larasdiniz/taskflow",
+      tags: ["Flutter", "Dart", "UI/UX", "Mobile Development"]
     },
     {
       title: "App de Saúde",
       description: "Aplicativo para monitoramento de saúde com gráficos, lembretes de medicamentos e histórico médico.",
-      image: mobileProject,
+      image: healthAppImage,
       link: "https://github.com",
       tags: ["React Native", "Firebase", "HealthKit"],
     },
   ];
 
+  // Projetos Front-end
   const frontendProjects = [
     {
       title: "Dashboard Analytics",
       description: "Dashboard interativo com gráficos em tempo real, visualização de dados complexos e relatórios customizados.",
-      image: frontendProject,
+      image: frontendProject1,
       link: "https://github.com",
       tags: ["React", "Chart.js", "Tailwind CSS"],
     },
     {
       title: "Landing Page SaaS",
       description: "Landing page moderna e responsiva para plataforma SaaS com animações suaves e design elegante.",
-      image: frontendProject,
+      image: frontendProject2,
       link: "https://github.com",
       tags: ["React", "TypeScript", "Framer Motion"],
     },
   ];
 
+  // Projetos Back-end
   const backendProjects = [
     {
       title: "API RESTful E-commerce",
       description: "API robusta com autenticação, gestão de produtos, pedidos e integração com gateways de pagamento.",
-      image: backendProject,
+      image: backendProject1,
       link: "https://github.com",
       tags: ["Node.js", "Express", "PostgreSQL"],
     },
     {
       title: "Sistema de Gestão Java",
       description: "Sistema completo de gestão empresarial com Java Spring Boot, incluindo módulos de vendas, estoque e relatórios.",
-      image: backendProject,
+      image: backendProject2,
       link: "https://github.com",
       tags: ["Java", "Spring Boot", "MySQL"],
     },
   ];
 
+  // Seções
   const sections = [
     { 
       id: "mobile", 
