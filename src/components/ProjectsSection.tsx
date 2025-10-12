@@ -1,15 +1,13 @@
 import ProjectCarousel from "./ProjectCarousel";
-import { Smartphone, Code, Server } from "lucide-react";
+import { Smartphone, Layers } from "lucide-react";
 
 // Imagens Mobile
 import taskflowImage from "@/assets/taskflowBanner.jpeg";
 import healthAppImage from "@/assets/mobile-project.jpg";
 
-// Imagens Front-end
+// Imagens Full Stack
 import frontendProject1 from "@/assets/frontend-project.jpg";
 import frontendProject2 from "@/assets/frontend-project.jpg";
-
-// Imagens Back-end
 import backendProject1 from "@/assets/backend-project.jpg";
 import backendProject2 from "@/assets/backend-project.jpg";
 
@@ -18,50 +16,52 @@ const ProjectsSection = () => {
   const mobileProjects = [
     {
       title: "TaskFlow",
-      description: "Projeto de gerenciamento de tarefas em Flutter, com telas funcionais, navegação fluida e design intuitivo, focado em melhorar a organização do dia a dia.",
+      description:
+        "Projeto de gerenciamento de tarefas em Flutter, com telas funcionais, navegação fluida e design intuitivo, focado em melhorar a organização do dia a dia.",
       image: taskflowImage,
       link: "https://github.com/larasdiniz/taskflow",
-      tags: ["Flutter", "Dart", "UI/UX", "Mobile Development"]
+      tags: ["Flutter", "Dart", "UI/UX", "Mobile Development"],
     },
     {
       title: "App de Saúde",
-      description: "Aplicativo para monitoramento de saúde com gráficos, lembretes de medicamentos e histórico médico.",
+      description:
+        "Aplicativo para monitoramento de saúde com gráficos, lembretes de medicamentos e histórico médico.",
       image: healthAppImage,
       link: "https://github.com",
       tags: ["React Native", "Firebase", "HealthKit"],
     },
   ];
 
-  // Projetos Front-end
-  const frontendProjects = [
+  // Projetos Full Stack (junção de front + back)
+  const fullStackProjects = [
     {
       title: "Dashboard Analytics",
-      description: "Dashboard interativo com gráficos em tempo real, visualização de dados complexos e relatórios customizados.",
+      description:
+        "Dashboard interativo com gráficos em tempo real, visualização de dados complexos e relatórios customizados.",
       image: frontendProject1,
       link: "https://github.com",
       tags: ["React", "Chart.js", "Tailwind CSS"],
     },
     {
       title: "Landing Page SaaS",
-      description: "Landing page moderna e responsiva para plataforma SaaS com animações suaves e design elegante.",
+      description:
+        "Landing page moderna e responsiva para plataforma SaaS com animações suaves e design elegante.",
       image: frontendProject2,
       link: "https://github.com",
       tags: ["React", "TypeScript", "Framer Motion"],
     },
-  ];
-
-  // Projetos Back-end
-  const backendProjects = [
     {
       title: "API RESTful E-commerce",
-      description: "API robusta com autenticação, gestão de produtos, pedidos e integração com gateways de pagamento.",
+      description:
+        "API robusta com autenticação, gestão de produtos, pedidos e integração com gateways de pagamento.",
       image: backendProject1,
       link: "https://github.com",
       tags: ["Node.js", "Express", "PostgreSQL"],
     },
     {
       title: "Sistema de Gestão Java",
-      description: "Sistema completo de gestão empresarial com Java Spring Boot, incluindo módulos de vendas, estoque e relatórios.",
+      description:
+        "Sistema completo de gestão empresarial com Java Spring Boot, incluindo módulos de vendas, estoque e relatórios.",
       image: backendProject2,
       link: "https://github.com",
       tags: ["Java", "Spring Boot", "MySQL"],
@@ -70,26 +70,19 @@ const ProjectsSection = () => {
 
   // Seções
   const sections = [
-    { 
-      id: "mobile", 
-      title: "Mobile", 
-      icon: Smartphone, 
+    {
+      id: "mobile",
+      title: "Mobile",
+      icon: Smartphone,
       projects: mobileProjects,
-      description: "Aplicativos mobile nativos e híbridos"
+      description: "Aplicativos mobile nativos e híbridos",
     },
-    { 
-      id: "frontend", 
-      title: "Front-end", 
-      icon: Code, 
-      projects: frontendProjects,
-      description: "Interfaces web modernas e responsivas"
-    },
-    { 
-      id: "backend", 
-      title: "Back-end", 
-      icon: Server, 
-      projects: backendProjects,
-      description: "APIs robustas e sistemas escaláveis"
+    {
+      id: "fullstack",
+      title: "Full Stack",
+      icon: Layers,
+      projects: fullStackProjects,
+      description: "Aplicações completas, do front-end ao back-end",
     },
   ];
 
@@ -107,8 +100,8 @@ const ProjectsSection = () => {
 
         <div className="space-y-24">
           {sections.map((section, index) => (
-            <div 
-              key={section.id} 
+            <div
+              key={section.id}
               id={section.id}
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -122,7 +115,7 @@ const ProjectsSection = () => {
                   <p className="text-muted-foreground">{section.description}</p>
                 </div>
               </div>
-              
+
               <ProjectCarousel projects={section.projects} />
             </div>
           ))}
