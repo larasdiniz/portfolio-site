@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/portfolio-site/", // ← ADICIONE ESTA LINHA (substitua pelo nome do seu repositório)
+  base: "/portfolio-site/",
 }));
