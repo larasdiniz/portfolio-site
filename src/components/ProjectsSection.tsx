@@ -1,5 +1,5 @@
 import ProjectCarousel from "./ProjectCarousel";
-import { Smartphone, Layers } from "lucide-react";
+import { Smartphone, Globe } from "lucide-react";
 
 // Imagens Mobile
 import taskflowImage from "@/assets/taskflowBanner.jpeg";
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
     },
   ];
 
-  // Projetos Full Stack (junção de front + back)
+  // Projetos Full Stack (Web)
   const fullStackProjects = [
     {
       title: "Dashboard Analytics",
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
         "Dashboard interativo com gráficos em tempo real, visualização de dados complexos e relatórios customizados.",
       image: frontendProject1,
       link: "https://github.com",
-      tags: ["React", "Chart.js", "Tailwind CSS"],
+      tags: ["React", "Node.js", "PostgreSQL", "Chart.js"],
     },
     {
       title: "Landing Page SaaS",
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
         "Landing page moderna e responsiva para plataforma SaaS com animações suaves e design elegante.",
       image: frontendProject2,
       link: "https://github.com",
-      tags: ["React", "TypeScript", "Framer Motion"],
+      tags: ["React", "TypeScript", "Express", "MongoDB"],
     },
     {
       title: "API RESTful E-commerce",
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
         "API robusta com autenticação, gestão de produtos, pedidos e integração com gateways de pagamento.",
       image: backendProject1,
       link: "https://github.com",
-      tags: ["Node.js", "Express", "PostgreSQL"],
+      tags: ["Node.js", "Express", "React", "PostgreSQL"],
     },
     {
       title: "Sistema de Gestão Java",
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
         "Sistema completo de gestão empresarial com Java Spring Boot, incluindo módulos de vendas, estoque e relatórios.",
       image: backendProject2,
       link: "https://github.com",
-      tags: ["Java", "Spring Boot", "MySQL"],
+      tags: ["Java", "Spring Boot", "React", "MySQL"],
     },
   ];
 
@@ -72,17 +72,17 @@ const ProjectsSection = () => {
   const sections = [
     {
       id: "mobile",
-      title: "Mobile",
+      title: "Projetos Mobile",
       icon: Smartphone,
       projects: mobileProjects,
-      description: "Aplicativos mobile nativos e híbridos",
+      description: "Aplicativos mobile nativos e híbridos desenvolvidos com Flutter e React Native",
     },
     {
       id: "fullstack",
-      title: "Full Stack",
-      icon: Layers,
+      title: "Projetos Web Full Stack",
+      icon: Globe,
       projects: fullStackProjects,
-      description: "Aplicações completas, do front-end ao back-end",
+      description: "Aplicações web completas, do front-end ao back-end",
     },
   ];
 
@@ -93,8 +93,9 @@ const ProjectsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Meus <span className="gradient-text">Projetos</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Alguns dos projetos que desenvolvi ao longo da minha jornada
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Explore minha jornada através de projetos mobile e full stack que demonstram 
+            minhas habilidades em desenvolvimento de software
           </p>
         </div>
 
