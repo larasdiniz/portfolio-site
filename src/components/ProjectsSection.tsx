@@ -47,7 +47,7 @@ const ProjectsSection = () => {
       description:
         "Landing page moderna e responsiva desenvolvida com React e TypeScript para uma plataforma de livros usados, com foco em experiência do usuário, layout limpo e navegação intuitiva.",
       image: ReBook,
-      link: "https://laizaleal.github.io/bookish-loop/",
+      link: "https://larasdiniz.github.io/bookish-loop/",
       tags: ["React", "TypeScript", "Vite", "GitHub Pages"],
     },
     {
