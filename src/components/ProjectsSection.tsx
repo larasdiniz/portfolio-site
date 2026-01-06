@@ -3,7 +3,7 @@ import { Smartphone, Globe } from "lucide-react";
 
 // Imagens Mobile
 import taskflowImage from "@/assets/taskflowBanner.jpeg";
-import healthAppImage from "@/assets/mobile-project.jpg";
+import lumeBanner from "@/assets/lume-banner.png";
 
 // Imagens Full Stack
 import frontendProject1 from "@/assets/frontend-project.jpg";
@@ -19,16 +19,16 @@ const ProjectsSection = () => {
       description:
         "Projeto de gerenciamento de tarefas em Flutter, com telas funcionais, navegação fluida e design intuitivo, focado em melhorar a organização do dia a dia.",
       image: taskflowImage,
-      link: "https://github.com/larasdiniz/taskflow",
+      link: "https://larasdiniz.github.io/taskflow/",
       tags: ["Flutter", "Dart", "UI/UX", "Mobile Development"],
     },
     {
-      title: "App de Saúde",
+      title: "Lume",
       description:
-        "Aplicativo para monitoramento de saúde com gráficos, lembretes de medicamentos e histórico médico.",
-      image: healthAppImage,
+        "Aplicativo mobile de saúde mental desenvolvido em React Native. Atuei na implementação técnica do app, transformando o protótipo de UX/UI em uma aplicação funcional, responsiva e escalável.",
+      image: lumeBanner,
       link: "https://github.com",
-      tags: ["React Native", "Firebase", "HealthKit"],
+      tags: ["React Native", "Mobile Development", "Firebase", "JavaScript"],
     },
   ];
 
