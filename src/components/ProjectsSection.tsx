@@ -7,7 +7,7 @@ import lumeBanner from "@/assets/lume-banner.png";
 
 // Imagens Full Stack
 import frontendProject1 from "@/assets/frontend-project.jpg";
-import frontendProject2 from "@/assets/frontend-project.jpg";
+import ReBook from "@/assets/ReBook.png";
 import backendProject1 from "@/assets/backend-project.jpg";
 import backendProject2 from "@/assets/backend-project.jpg";
 
@@ -43,12 +43,12 @@ const ProjectsSection = () => {
       tags: ["React", "Node.js", "PostgreSQL", "Chart.js"],
     },
     {
-      title: "Landing Page SaaS",
+      title: "ReBook",
       description:
-        "Landing page moderna e responsiva para plataforma SaaS com animações suaves e design elegante.",
-      image: frontendProject2,
-      link: "https://github.com",
-      tags: ["React", "TypeScript", "Express", "MongoDB"],
+        "Landing page moderna e responsiva desenvolvida com React e TypeScript para uma plataforma de livros usados, com foco em experiência do usuário, layout limpo e navegação intuitiva.",
+      image: ReBook,
+      link: "https://laizaleal.github.io/bookish-loop/",
+      tags: ["React", "TypeScript", "Vite", "GitHub Pages"],
     },
     {
       title: "API RESTful E-commerce",
