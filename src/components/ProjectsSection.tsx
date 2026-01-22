@@ -10,6 +10,7 @@ import frontendProject1 from "@/assets/frontend-project.jpg";
 import ReBook from "@/assets/ReBook.png";
 import backendProject1 from "@/assets/backend-project.jpg";
 import ChronoElite from "@/assets/ChronoElite.png";
+import AtosCapital from "@/assets/AtosCapital.jpg";
 import backendProject2 from "@/assets/backend-project.jpg";
 
 const ProjectsSection = () => {
@@ -36,12 +37,12 @@ const ProjectsSection = () => {
   // Projetos Full Stack (Web)
   const fullStackProjects = [
     {
-      title: "Dashboard Analytics",
+      title: "Plataforma de BI com IA",
       description:
-        "Dashboard interativo com gráficos em tempo real, visualização de dados complexos e relatórios customizados.",
-      image: frontendProject1,
+        "Plataforma de Business Intelligence com Inteligência Artificial que permite aos usuários realizar perguntas em linguagem natural e obter insights automáticos a partir de consultas SQL geradas por IA. A solução se conecta diretamente a bancos de dados relacionais, oferecendo dashboards dinâmicos, interativos e em tempo real, sem necessidade de processos complexos de ETL.",
+      image: AtosCapital,
       link: "https://github.com",
-      tags: ["React", "Node.js", "PostgreSQL", "Chart.js"],
+      tags: ["React", "Node.js", "Business Intelligence", "Inteligência Artificial", "SQL", "Dashboards", "Data Analytics"],
     },
      {
       title: "ChronoElite",
