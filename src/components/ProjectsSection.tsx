@@ -9,6 +9,7 @@ import lumeBanner from "@/assets/lume-banner.png";
 import frontendProject1 from "@/assets/frontend-project.jpg";
 import ReBook from "@/assets/ReBook.png";
 import backendProject1 from "@/assets/backend-project.jpg";
+import ChronoElite from "@/assets/ChronoElite.png";
 import backendProject2 from "@/assets/backend-project.jpg";
 
 const ProjectsSection = () => {
@@ -41,6 +42,14 @@ const ProjectsSection = () => {
       image: frontendProject1,
       link: "https://github.com",
       tags: ["React", "Node.js", "PostgreSQL", "Chart.js"],
+    },
+     {
+      title: "ChronoElite",
+      description:
+        "E-commerce de venda de relógios com arquitetura full stack. O front-end foi desenvolvido em React e hospedado na Vercel, enquanto o back-end utiliza banco de dados PostgreSQL no Neon e está deployado no Render, garantindo escalabilidade e boa performance.",
+      image: ChronoElite, // se tiver uma imagem própria, é só trocar aqui
+      link: "https://watch-reveal.vercel.app",
+      tags: ["React", "PostgreSQL", "Neon", "Render", "Vercel", "Full Stack"],
     },
     {
       title: "ReBook",
