@@ -43,19 +43,19 @@ const ExperienceSection = () => {
     },
     {
       id: 2,
-      src: "portfolio-site/hackthons/hack-nasa2.jpeg",
+      src: "/portfolio-site/hackthons/hack-nasa2.jpeg",
       alt: "Equipe",
       caption: "2025 Global Winners"
     },
     {
       id: 3,
-      src: "portfolio-site/hackthons/hack-nasa1.jpeg",
+      src: "/portfolio-site/hackthons/hack-nasa1.jpeg",
       alt: "Equipe",
       caption: "2025 Global Winners"
     },
     {
       id: 4,
-      src: "portfolio-site/hackthons/hack-nasa3.jpeg",
+      src: "/portfolio-site/hackthons/hack-nasa3.jpeg",
       alt: "Equipe",
       caption: "2025 Global Winners"
     },
