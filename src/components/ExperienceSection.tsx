@@ -37,25 +37,25 @@ const ExperienceSection = () => {
   const hackathonPhotos = [
     {
       id: 1,
-      src: "public/hackthons/hack-nasa5.jpeg",
+      src: "/portfolio-site/hackthons/hack-nasa5.jpeg",
       alt: "Premiação",
       caption: "2025 Global Winners"
     },
     {
       id: 2,
-      src: "public/hackthons/hack-nasa2.jpeg",
+      src: "portfolio-site/hackthons/hack-nasa2.jpeg",
       alt: "Equipe",
       caption: "2025 Global Winners"
     },
     {
       id: 3,
-      src: "public/hackthons/hack-nasa1.jpeg",
+      src: "portfolio-site/hackthons/hack-nasa1.jpeg",
       alt: "Equipe",
       caption: "2025 Global Winners"
     },
     {
       id: 4,
-      src: "public/hackthons/hack-nasa3.jpeg",
+      src: "portfolio-site/hackthons/hack-nasa3.jpeg",
       alt: "Equipe",
       caption: "2025 Global Winners"
     },
