@@ -1,8 +1,25 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
+import NasaBadge from "./NasaBadge.tsx"; 
+import { useNavigate } from "react-router-dom"; 
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    // Se estamos na página inicial, role para a seção
+    if (window.location.pathname === '/' || window.location.pathname === '/portfolio-site/' || window.location.pathname === '/portfolio-site') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Se estamos em outra página, navegue de volta para a inicial com âncora
+      navigate(`/#${sectionId}`);
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -22,6 +39,12 @@ const Hero = () => {
             Olá, eu sou{" "}
             <span className="gradient-text">Lara Diniz</span>
           </h1>
+          
+          {/* Nasa Badge */}
+          <div className="mb-6 flex justify-center">
+            <NasaBadge />
+          </div>
+          
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Full Stack & Mobile Developer
           </p>
@@ -35,7 +58,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-hero hover:opacity-90 transition-opacity shadow-glow"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => scrollToSection('projects')}
             >
               Ver Projetos
             </Button>
@@ -43,7 +66,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => scrollToSection('contact')}
             >
               Entre em Contato
             </Button>

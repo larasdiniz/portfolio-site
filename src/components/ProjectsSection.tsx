@@ -3,10 +3,9 @@ import { Smartphone, Globe } from "lucide-react";
 
 // Imagens Mobile
 import taskflowImage from "@/assets/taskflowBanner.jpeg";
-import lumeBanner from "@/assets/lume-banner.png";
+import lumeBanner from "@/assets/lume-banner.jpeg";
 
 // Imagens Full Stack
-import frontendProject1 from "@/assets/frontend-project.jpg";
 import ReBook from "@/assets/ReBook.png";
 import backendProject1 from "@/assets/backend-project.jpg";
 import ChronoElite from "@/assets/ChronoElite.png";

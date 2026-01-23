@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,16 +18,32 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Início", href: "#home" },
+    { label: "Início", href: "/" },
     { label: "Projetos", href: "#projects" },
     { label: "Experiências", href: "#professional" },
     { label: "Certificações", href: "#certifications" },
+    { label: "NASA 2025", href: "/nasa" },
     { label: "Contato", href: "#contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (href: string) => {
+    if (href === '/') {
+      navigate('/');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href.startsWith('/')) {
+      // Para rotas completas como /nasa
+      navigate(href);
+    } else if (href.startsWith('#')) {
+      // Para âncoras
+      if (location.pathname === '/' || location.pathname === '/portfolio-site' || location.pathname === '/portfolio-site/') {
+        // Estamos na página inicial, role para a seção
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Estamos em outra página, navegue para a inicial com âncora
+        navigate(`/${href}`);
+      }
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -39,32 +58,27 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a 
-            href="#home" 
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#home");
+          <button 
+            onClick={() => {
+              navigate('/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="text-xl font-bold gradient-text"
+            className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity"
           >
             &lt;Dev/&gt;
-          </a>
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
+                onClick={() => handleNavigation(item.href)}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </button>
             ))}
           </div>
 
@@ -87,17 +101,13 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className="block py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                onClick={() => handleNavigation(item.href)}
+                className="block w-full text-left py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </div>
         )}

@@ -33,6 +33,34 @@ const ExperienceSection = () => {
     },
   ];
 
+  // Usando caminhos relativos para a pasta public
+  const hackathonPhotos = [
+    {
+      id: 1,
+      src: "public/hackthons/hack-nasa5.jpeg",
+      alt: "Premiação",
+      caption: "2025 Global Winners"
+    },
+    {
+      id: 2,
+      src: "public/hackthons/hack-nasa2.jpeg",
+      alt: "Equipe",
+      caption: "2025 Global Winners"
+    },
+    {
+      id: 3,
+      src: "public/hackthons/hack-nasa1.jpeg",
+      alt: "Equipe",
+      caption: "2025 Global Winners"
+    },
+    {
+      id: 4,
+      src: "public/hackthons/hack-nasa3.jpeg",
+      alt: "Equipe",
+      caption: "2025 Global Winners"
+    },
+  ];
+
   return (
     <section id="experience" className="py-20 px-4 bg-secondary/30">
       <div className="container mx-auto">
@@ -74,17 +102,21 @@ const ExperienceSection = () => {
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {[1, 2, 3, 4].map((i) => (
+            {hackathonPhotos.map((photo) => (
               <div 
-                key={i} 
-                className="aspect-square rounded-lg bg-muted/20 border border-border flex items-center justify-center hover:scale-105 transition-transform duration-300"
+                key={photo.id} 
+                className="aspect-square rounded-lg overflow-hidden bg-muted/20 border border-border hover:scale-105 transition-transform duration-300 group relative"
               >
-                <div className="text-center p-4">
-                  <Trophy className="w-8 h-8 mx-auto mb-2 text-primary" />
-                  <p className="text-xs text-muted-foreground">Foto #{i}</p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Adicione suas fotos aqui
-                  </p>
+                {/* Usando img padrão em vez de Image do Next.js */}
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading="lazy"
+                />
+                {/* Legenda que aparece no hover */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white text-sm font-medium">{photo.caption}</p>
                 </div>
               </div>
             ))}

@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import NasaPage from "./pages/NasaPage"; // Importe a nova página
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -13,9 +14,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/portfolio-site"> {/* ← ADICIONE ESTA LINHA */}
+      <BrowserRouter basename="/portfolio-site">
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/nasa" element={<NasaPage />} /> {/* Nova rota */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
